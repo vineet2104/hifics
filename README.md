@@ -24,15 +24,18 @@ Robots interacting with humans through natural language can unlock numerous appl
 
 ## Training HiFi-CS
 
-1. **Prepare the dataset:**
-    We offer support to train the model on 2 datasets - [RoboRefIt](https://ieeexplore.ieee.org/document/10341379) and [OCID-VLG](https://openreview.net/pdf/25fe155e277cb95267cd9b875bb02f9c88dcb8c5.pdf).
+We offer support to train the model on 2 datasets - [RoboRefIt](https://ieeexplore.ieee.org/document/10341379) and [OCID-VLG](https://openreview.net/pdf/25fe155e277cb95267cd9b875bb02f9c88dcb8c5.pdf). Please follow the steps below to download the datasets and save it in the required format for easy training and testing. 
 
-2. **Train the model:**
+1. **Download and prepare the RoboRefIt dataset:**
+    Download the dataset from [link](https://drive.google.com/file/d/1pdGF1HaU_UiKfh5Z618hy3nRjVbq_VuW/view?usp=sharing) and move it to the ./datasets/ folder
+    
+
+3. **Train the model:**
     ```bash
     python train.py --data_dir path/to/dataset --output_dir path/to/save/models
     ```
 
-3. **Monitor training:**
+4. **Monitor training:**
     Optionally, you can use TensorBoard to monitor the training process:
     ```bash
     tensorboard --logdir path/to/logs
