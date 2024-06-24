@@ -45,9 +45,9 @@ We offer support to train the model on 2 datasets - [RoboRefIt](https://ieeexplo
 
     ```plaintext
     ./datasets/
-    dataloader.py
-    load_ocidvlg.py
-    prepare_ocidvlg.py
+    ├── dataloader.py
+    ├── load_ocidvlg.py
+    ├── prepare_ocidvlg.py
     ├── OCID-VLG/
     └── RoboRESTest/
     └── final_dataset/
