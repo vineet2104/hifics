@@ -143,15 +143,4 @@ We provide a simple framework to create your own 2D visual grounding dataset to 
 
 ## Citation
 
-If you find our work useful in your research, please cite our paper:
-```bibtex
-@article{yourpaper2024,
-  title={Title of Your Paper},
-  author={Your Name and Co-Authors},
-  journal={Journal Name},
-  year={2024},
-  volume={xx},
-  number={xx},
-  pages={xx-xx},
-  doi={xx/xx/xx}
-}
+<Will be added soon>
