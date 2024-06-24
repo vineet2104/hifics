@@ -115,27 +115,28 @@ We provide a simple framework to create your own 2D visual grounding dataset to 
 
 3. **RoboRESTest Corpus:**
 
-    The test corpus used in our paper is provided in ./datasets/RoboRESTest. The file ./datasets/RoboRESTest/robores_test.json contains a list of tuple, where each tuple corresponds to (RGB-Mask-Text) for training/testing HiFi-CS or other 2D visual grounding datasets. Each tuple has the following structure -
-   
-   ```json
+    The test corpus used in our paper is provided in `./datasets/RoboRESTest`. The file `./datasets/RoboRESTest/robores_test.json` contains a list of tuples, where each tuple corresponds to (RGB-Mask-Text) for training/testing HiFi-CS or other 2D visual grounding datasets. Each tuple has the following structure:
+
+    ```json
     {
         "num": 0,
-        "text": "Please grab the silver bowl on the left", # Referring text corresponding to a given mask of the RGB image
-        "rgb_path": "./RoboRESTest/sample120.png", # Path to RGB image 
-        "mask_path": "./RoboRESTest/masks/sample120_mask_11.png", # Path to B/W mask
-        "lighting": "D", # Lighting category: D - Dim, M - Medium, B - Bright
-        "clutter": "M", # Clutter category: L - Low, M - Medium, H - High
-        "setup": "TT" # Background setup: TT - Table Top, S - Multilayered Shelf, D - Drawers, C - Chair, M - Human hand.
-    },
+        "text": "Please grab the silver bowl on the left",
+        "rgb_path": "./RoboRESTest/sample120.png",
+        "mask_path": "./RoboRESTest/masks/sample120_mask_11.png",
+        "lighting": "D",
+        "clutter": "M",
+        "setup": "TT"
+    }
     ```
-   <!--
-- "text": Referring text corresponding to a given mask of the RGB image
-- "rgb_path": Path to RGB image
-- "mask_path": Path to B/W mask
-- "lighting": Lighting category: D - Dim, M - Medium, B - Bright
-- "clutter": Clutter category: L - Low, M - Medium, H - High
-- "setup": Background setup: TT - Table Top, S - Multilayered Shelf, D - Drawers, C - Chair, M - Human hand.
--->
+
+    <!--
+    - "text": Referring text corresponding to a given mask of the RGB image
+    - "rgb_path": Path to RGB image
+    - "mask_path": Path to B/W mask
+    - "lighting": Lighting category: D - Dim, M - Medium, B - Bright
+    - "clutter": Clutter category: L - Low, M - Medium, H - High
+    - "setup": Background setup: TT - Table Top, S - Multilayered Shelf, D - Drawers, C - Chair, M - Human hand.
+    -->
 
 ## Citation
 
