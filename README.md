@@ -120,14 +120,13 @@ We provide a simple framework to create your own 2D visual grounding dataset to 
    ```json
     {
         "num": 0,
-        "text": "Please grab the silver bowl on the left",
-        "rgb_path": "./RoboRESTest/sample120.png",
-        "mask_path": "./RoboRESTest/masks/sample120_mask_11.png",
-        "lighting": "D",
-        "clutter": "M",
-        "setup": "TT"
+        "text": "Please grab the silver bowl on the left", # Referring text corresponding to a given mask of the RGB image
+        "rgb_path": "./RoboRESTest/sample120.png", # Path to RGB image 
+        "mask_path": "./RoboRESTest/masks/sample120_mask_11.png", # Path to B/W mask
+        "lighting": "D", # Lighting category: D - Dim, M - Medium, B - Bright
+        "clutter": "M", # Clutter category: L - Low, M - Medium, H - High
+        "setup": "TT" # Background setup: TT - Table Top, S - Multilayered Shelf, D - Drawers, C - Chair, M - Human hand.
     },
-   ...
     ```
 
 ## Citation
