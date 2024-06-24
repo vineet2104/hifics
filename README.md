@@ -104,7 +104,7 @@ We provide a simple framework to create your own 2D visual grounding dataset to 
    **A. Download the model checkpoint:**
     Download the file from [link](https://huggingface.co/spaces/abhishek/StableSAM/resolve/main/sam_vit_h_4b8939.pth?download=true) and move it to the main folder
 
-    **B. Install Grounded-SAM and partial dependencies for running the notebook:**
+    **B. Install Grounded-SAM and partial dependencies for running the notebook (Run these commands from the main working directory):**
     ```bash
     git clone https://github.com/IDEA-Research/Grounded-Segment-Anything.git
     cd Grounded-Segment-Anything
