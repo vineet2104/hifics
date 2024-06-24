@@ -93,28 +93,41 @@ Trained models are saved in ./logs folder. After training HiFi-CS on RoboRefIt a
     python score.py config.yaml 1 1
     ```
 
-## Creating a Custom Dataset
+## Creating your Custom 2D Visual Grounding dataset
 
-1. **Collect your data:**
-    Gather your data and organize it into appropriate folders, typically `train`, `val`, and `test`.
+We provide a simple framework to create your own 2D visual grounding dataset to either train HiFi-CS or evaluate trained models using a small test corpus. This method assumes you have captured RGB images using either a mobile or robot-mounted camera in the .png format. We provided a notebook: data-gen-2DVG.ipynb to load a sample image and generate masks of all objects in the image. Before running the notebook, please follow the steps below to load all supporting scripts - 
 
-2. **Format your data:**
-    Ensure your data is in the required format (e.g., images, annotations, etc.). Refer to the dataset preparation guidelines in the documentation.
+1. **Using Segment Anything Model (SAM) to generate candidate masks:**
+    [SAM](https://arxiv.org/abs/2304.02643) is a powerful model trained on a large dataset for object segmentation. We load this model from the Grounded-SAM github repository. Please follow the instructions below to import all code files needed (Run the commands in the same conda environment)
 
-3. **Update the configuration:**
-    Modify the dataset configuration file to point to your custom dataset directories:
-    ```json
-    {
-      "train": "path/to/train",
-      "val": "path/to/val",
-      "test": "path/to/test"
-    }
+   **A. Download the model checkpoint:**
+    Download the file from [link](https://huggingface.co/spaces/abhishek/StableSAM/resolve/main/sam_vit_h_4b8939.pth?download=true) and move it to the main folder
+
+    **B. Install Grounded-SAM and partial dependencies for running the notebook:**
+    ```bash
+    git clone https://github.com/IDEA-Research/Grounded-Segment-Anything.git
+    cd Grounded-Segment-Anything
+    python -m pip install -e segment_anything
     ```
 
-4. **Preprocess the data:**
-    If necessary, run any preprocessing scripts provided to prepare your data for training:
-    ```bash
-    python preprocess.py --data_dir path/to/dataset
+2. **Run the notebook:**
+   Run all cells in the data-gen-2DVG.ipynb to load a sample image and generate masks for all objects in the image. However, not all masks correspond to meaninful entities. We provide a helpful user interface to manually verify each generated mask from the RGB image. This results in (RGB-Mask) pairs that can be crowd sourced to generate referring text for each mask.
+
+3. **RoboRESTest Corpus:**
+
+    The test corpus used in our paper is provided in ./datasets/RoboRESTest. The file ./datasets/RoboRESTest/robores_test.json contains a list of tuple, where each tuple corresponds to (RGB-Mask-Text) for training/testing HiFi-CS or other 2D visual grounding datasets. Each tuple has the following structure -
+   
+   ```json
+    {
+        "num": 0,
+        "text": "Please grab the silver bowl on the left",
+        "rgb_path": "./RoboRESTest/sample120.png",
+        "mask_path": "./RoboRESTest/masks/sample120_mask_11.png",
+        "lighting": "D",
+        "clutter": "M",
+        "setup": "TT"
+    },
+   ...
     ```
 
 ## Citation
