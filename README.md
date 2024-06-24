@@ -86,7 +86,7 @@ Trained models are saved in ./logs folder. After training HiFi-CS on RoboRefIt a
     ```bash
     python score.py config.yaml 0 0
     ```
-    Note - change the test_split variable in test_configuration to evaluate on testA or testB
+    Note - change the test_split variable in test_configuration in the experiments/config.yaml file to evaluate on testA or testB
 
 2. **Evaluate hifics-ocidvlg-default on OCID-VLG Test split:**
     ```bash
