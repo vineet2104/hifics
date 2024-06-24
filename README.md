@@ -24,7 +24,7 @@ Robots interacting with humans through natural language can unlock numerous appl
 
 ## Training HiFi-CS
 
-We offer support to train the model on 2 datasets - [RoboRefIt](https://ieeexplore.ieee.org/document/10341379) and [OCID-VLG](https://openreview.net/pdf/25fe155e277cb95267cd9b875bb02f9c88dcb8c5.pdf). Please follow the steps below to download the datasets and save it in the required format for easy training and testing. 
+We offer support to train the model on 2 datasets - [RoboRefIt](https://ieeexplore.ieee.org/document/10341379) and [OCID-VLG](https://openreview.net/pdf/25fe155e277cb95267cd9b875bb02f9c88dcb8c5.pdf). Please follow the steps below to download the datasets and save it in the required format for easy training and testing. Training configurations can be modified by making appropriate changes in experiments/config.yaml
 
 1. **Download the RoboRefIt dataset:**
    
