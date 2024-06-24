@@ -7,19 +7,19 @@ Robots interacting with humans through natural language can unlock numerous appl
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/vineet2104/HiFiCS-VisualGrounding.git
+    cd HiFiCS-VisualGrounding/
     ```
 
-2. **Create and activate a virtual environment (optional but recommended):**
+2. **Create and activate a conda environment:**
     ```bash
-    python3 -m venv venv
-    source venv/bin/activate   # On Windows use `venv\Scripts\activate`
+    conda env create -f hifics_env.yml
+    conda activate hifics
     ```
 
-3. **Install the required packages:**
+3. **Install CLIP**
     ```bash
-    pip install -r requirements.txt
+    pip install git+https://github.com/openai/CLIP.git
     ```
 
 ## Training the Model
