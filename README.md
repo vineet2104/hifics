@@ -128,6 +128,14 @@ We provide a simple framework to create your own 2D visual grounding dataset to 
         "setup": "TT" # Background setup: TT - Table Top, S - Multilayered Shelf, D - Drawers, C - Chair, M - Human hand.
     },
     ```
+   <!--
+- "text": Referring text corresponding to a given mask of the RGB image
+- "rgb_path": Path to RGB image
+- "mask_path": Path to B/W mask
+- "lighting": Lighting category: D - Dim, M - Medium, B - Bright
+- "clutter": Clutter category: L - Low, M - Medium, H - High
+- "setup": Background setup: TT - Table Top, S - Multilayered Shelf, D - Drawers, C - Chair, M - Human hand.
+-->
 
 ## Citation
 
