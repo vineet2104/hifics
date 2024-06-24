@@ -114,7 +114,7 @@ We provide a simple framework to create your own 2D visual grounding dataset to 
 
 3. **RoboRESTest Corpus:**
 
-    The test corpus used in our paper is provided in `./datasets/RoboRESTest`. The file `./datasets/RoboRESTest/robores_test.json` contains a list of tuples, where each tuple corresponds to (RGB-Mask-Text) for training/testing HiFi-CS or other 2D visual grounding datasets. Each tuple has the following structure:
+    The test corpus used in our paper can be downloaded from [here](https://drive.google.com/file/d/1X12hYcVT8HGLqMZW-LLL5mOEHLYG2ZtN/view?usp=sharing). Please unzip the folder and save it in the ./datasets folder. The file `./datasets/RoboRESTest/robores_test.json` contains a list of tuples, where each tuple corresponds to (RGB-Mask-Text) for training/testing HiFi-CS or other 2D visual grounding datasets. Each tuple has the following structure:
 
     ```json
     {
@@ -136,6 +136,8 @@ We provide a simple framework to create your own 2D visual grounding dataset to 
         - **lighting:** Lighting category: D - Dim, M - Medium, B - Bright
         - **clutter:** Clutter category: L - Low, M - Medium, H - High
         - **setup:** Background setup: TT - Table Top, S - Multilayered Shelf, D - Drawers, C - Chair, M - Human hand
+
+   
 
 ## Citation
 
