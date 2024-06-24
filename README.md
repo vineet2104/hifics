@@ -68,15 +68,14 @@ We offer support to train the model on 2 datasets - [RoboRefIt](https://ieeexplo
             ocid_vlg_train.json
     ```
 
-4. **Train the model:**
+4. **Train HiFi-CS on RoboRefIt:**
     ```bash
-    python train.py --data_dir path/to/dataset --output_dir path/to/save/models
+    python training.py config.yaml 0
     ```
 
-5. **Monitor training:**
-    Optionally, you can use TensorBoard to monitor the training process:
+5. **Train HiFi-CS on OCID-VLG:**
     ```bash
-    tensorboard --logdir path/to/logs
+    python training.py config.yaml 1
     ```
 
 ## Testing the Model
