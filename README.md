@@ -22,10 +22,10 @@ Robots interacting with humans through natural language can unlock numerous appl
     pip install git+https://github.com/openai/CLIP.git
     ```
 
-## Training the Model
+## Training HiFi-CS
 
 1. **Prepare the dataset:**
-    Ensure your dataset is in the correct format and placed in the appropriate directory. You can create a custom dataset by following the instructions below.
+    We offer support to train the model on 2 datasets - [RoboRefIt](https://ieeexplore.ieee.org/document/10341379) and [OCID-VLG](https://openreview.net/pdf/25fe155e277cb95267cd9b875bb02f9c88dcb8c5.pdf).
 
 2. **Train the model:**
     ```bash
