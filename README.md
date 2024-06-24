@@ -129,7 +129,7 @@ We provide a simple framework to create your own 2D visual grounding dataset to 
     }
     ```
 
-    Each field in the JSON structure has the following meaning:
+    Description of JSON variables:
     
         - **text:** Referring text corresponding to a given mask of the RGB image
         - **rgb_path:** Path to RGB image
