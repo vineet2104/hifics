@@ -26,16 +26,54 @@ Robots interacting with humans through natural language can unlock numerous appl
 
 We offer support to train the model on 2 datasets - [RoboRefIt](https://ieeexplore.ieee.org/document/10341379) and [OCID-VLG](https://openreview.net/pdf/25fe155e277cb95267cd9b875bb02f9c88dcb8c5.pdf). Please follow the steps below to download the datasets and save it in the required format for easy training and testing. 
 
-1. **Download and prepare the RoboRefIt dataset:**
+1. **Download the RoboRefIt dataset:**
+   
     Download the dataset from [link](https://drive.google.com/file/d/1pdGF1HaU_UiKfh5Z618hy3nRjVbq_VuW/view?usp=sharing) and move it to the ./datasets/ folder
-    
 
-3. **Train the model:**
+2. **Download and prepare the OCID-VLG dataset:**
+
+    **A. Download the dataset:**
+    Download the dataset from [link](https://drive.google.com/file/d/1VwcjgyzpKTaczovjPNAHjh-1YvWz9Vmt/view?usp=share_link) and move it to the `./datasets/` folder.
+
+    **B. Process the dataset:**
+    Run the following command to process the data and prepare train-test splits:
+    ```bash
+    python datasets/prepare_ocidvlg.py
+    ```
+
+    At this point, the `./datasets/` folder should look like:
+
+    ```plaintext
+    ./datasets/
+    dataloader.py
+    load_ocidvlg.py
+    prepare_ocidvlg.py
+    ├── OCID-VLG/
+    └── RoboRESTest/
+    └── final_dataset/
+        ├── testA/
+        ├── testB/
+        ├── train/
+            ├── depth/
+            ├── depth_colormap/
+            ├── image/
+            ├── mask/
+            roborefit_train.json
+    └── ocidvlg_final_dataset/
+        ├── test/
+        ├── train/
+            ├── depth/
+            ├── image/
+            ├── mask/
+            ocid_vlg_train.json
+    ```
+
+4. **Train the model:**
     ```bash
     python train.py --data_dir path/to/dataset --output_dir path/to/save/models
     ```
 
-4. **Monitor training:**
+5. **Monitor training:**
     Optionally, you can use TensorBoard to monitor the training process:
     ```bash
     tensorboard --logdir path/to/logs
