@@ -143,4 +143,4 @@ We provide a simple framework to create your own 2D visual grounding dataset to 
 
 ## Citation
 
-<Will be added soon>
+Will be added soon.
