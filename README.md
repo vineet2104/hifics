@@ -10,7 +10,7 @@ Robots interacting with humans through natural language can unlock numerous appl
 1. **Clone the repository:**
     ```bash
     git clone https://github.com/vineet2104/HiFiCS-VisualGrounding.git
-    cd HiFiCS-VisualGrounding/
+    cd HiFiCS-VisualGrounding-main/
     ```
 
 2. **Create and activate a conda environment:**
