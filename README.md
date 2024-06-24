@@ -80,13 +80,18 @@ We offer support to train the model on 2 datasets - [RoboRefIt](https://ieeexplo
 
 ## Testing the Model
 
-1. **Evaluate the trained model:**
-    ```bash
-    python test.py --model_path path/to/save/models --data_dir path/to/testset
-    ```
+Trained models are saved in ./logs folder. After training HiFi-CS on RoboRefIt and OCID-VLG separately, we offer support to evaluate these models on their respective test sets.
 
-2. **View results:**
-    The test script will output the evaluation metrics and any relevant visualizations.
+1. **Evaluate hifics-roborefit-default on RoboRefIt Test A and Test B splits:**
+    ```bash
+    python score.py config.yaml 0 0
+    ```
+    Note - change the test_split variable in test_configuration to evaluate on testA or testB
+
+2. **Evaluate hifics-ocidvlg-default on OCID-VLG Test split:**
+    ```bash
+    python score.py config.yaml 1 1
+    ```
 
 ## Creating a Custom Dataset
 
