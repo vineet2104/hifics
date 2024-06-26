@@ -1,0 +1,70 @@
+configuration:
+
+  # model 
+  model: models.hifics.CLIPDensePredT
+  extended_film: False
+  out: 1
+  extract_layers: [1,3,5,7,9]
+  reduce_dim: 64
+  depth: 5
+
+  # dataset
+  dataset: datasets.dataloader.VGDataLoader   # <-----------------
+  batch_size: 16
+  image_size: 352
+  invert_mask: True
+
+  # training
+  optimizer: torch.optim.AdamW
+  lr: 0.001
+  lr_scheduler: cosine
+  T_max: 20000
+  eta_min: 0.0001
+  warmup: 1000
+  loss: torch.nn.functional.binary_cross_entropy_with_logits
+  amp: True
+  max_iterations: 20000
+  
+
+test_configuration_common:
+  normalize: True
+  image_size: 352
+  batch_size: 16
+  sigmoid_threshold: 0.5
+  invert_mask: True
+  metric: metrics.FixedIntervalMetrics
+
+  
+test_configuration: 
+
+  -
+    name: test-roborefit
+    test_dataset: roborefit
+    test_split: testB # RoboRefIt has two test splits - testA and testB, which can be called accordingly.
+    apply_sigmoid: True
+    iteration_cp: # Can be set to the saved checkpoint number (5000/10000/15000 etc). Keep it blank if you want to use the final checkpoint after training.
+    invert_mask: True
+  
+  -
+    name: test-ocidvlg  # old: phrasecut
+    metric: metrics.FixedIntervalMetrics
+    test_dataset: ocidvlg
+    test_split:
+    apply_sigmoid: True
+    sigmoid_threshold: 0.85
+    iteration_cp:
+    invert_mask: True
+
+
+columns: [i, name, pc_miou_0.3, pc_fgiou_0.3, pc_fgiou_0.5, pc_ap, duration, date]
+
+
+individual_configurations:
+
+# important ones
+
+- {name: hifics-roborefit-default, version: 'ViT-B/16', reduce_dim: 64, train_json: "./datasets/final_dataset/train/roborefit_train.json", checkpoint_iterations: [5000,10000,15000,20000]}
+
+- {name: hifics-ocidvlg-default, version: 'ViT-B/16', reduce_dim: 64, train_json: "./datasets/ocidvlg_final_dataset/train/ocid_vlg_train.json", checkpoint_iterations: [5000,10000,15000,20000]}
+
+
