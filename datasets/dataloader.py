@@ -48,7 +48,7 @@ class VGDataLoader(Dataset):
         # Define transformations
 
         item = self.data[idx]
-        master_dir = "./datasets"
+        master_dir = "./"
         image = Image.open(master_dir+"/"+item['rgb_path'].replace("\\","/")).convert('RGB')
         mask = Image.open(master_dir+"/"+item['mask_path'].replace("\\","/")).convert('L')  # Assuming masks are in grayscale
 
