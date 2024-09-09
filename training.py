@@ -1,7 +1,6 @@
 """
 ===============================================================================
 Title:           training.py
-Author:          Vineet Bhat
 Date:            June 22, 2024
 Description:     This script contains the code for training the HiFi-CS model using the provided configuration file. 
 
