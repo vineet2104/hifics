@@ -1,7 +1,6 @@
 """
 ===============================================================================
 Title:           prepare_ocidvlg.py
-Author:          Vineet Bhat
 Date:            June 23, 2024
 Description:     This file is used to process the OCID VLG Dataset and convert it to the required format for training and testing HiFi-CS
 Usage:           python datasets/prepare_ocidvlg.py
