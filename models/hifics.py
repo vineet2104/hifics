@@ -1,7 +1,6 @@
 """
 ===============================================================================
 Title:           hifics.py
-Author:          Vineet Bhat
 Date:            June 23, 2024
 Description:     This script contains the architecture of the Visual Grounding Model HiFi-CS, featuring CLIP as a multi-modal backend and a lightweight segmentation decoder.  Parts of this script are taken from the ClipSeg repository                 on GitHub. License applied as: https://github.com/timojl/clipseg?tab=License-1-ov-file#readme
 ===============================================================================
