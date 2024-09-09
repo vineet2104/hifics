@@ -1,7 +1,6 @@
 """
 ===============================================================================
 Title:           dataloader.py
-Author:          Vineet Bhat
 Date:            June 22, 2024
 Description:     This script contains the VGDataLoader() class for loading the RoboRefIt and OCID-VLG dataset. We process and save files as simple .json files for train and test splits. Each entry of the .json file contains a tuple of                 (RGB image path, Mask Path, Referring Text). This script cannot be used standalone. 
 ===============================================================================
