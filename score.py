@@ -1,7 +1,6 @@
 """
 ===============================================================================
 Title:           score.py
-Author:          Vineet Bhat
 Date:            June 23, 2024
 Description:     This script can be used to evaluate trained HiFi-CS models on the RoboRefIt and OCID-VLG dataset
 Usage:           python score.py hifics_config.yaml 0 0 -> First 0 indicates the individual_configuration in the .yaml file and second 0 indicates the test dataset specified in test_configuration in the .yaml file
