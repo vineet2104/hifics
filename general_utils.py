@@ -1,7 +1,6 @@
 """
 ===============================================================================
 Title:           general_utils.py
-Author:          Vineet Bhat
 Date:            June 22, 2024
 Description:     This script contains various helper functions that are called by frontend scripts for training and testing models. This file cannot be run as a standalone script. 
 ===============================================================================
