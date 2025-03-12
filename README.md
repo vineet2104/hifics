@@ -139,8 +139,12 @@ We provide a simple framework to create your own 2D visual grounding dataset to 
         - **clutter:** Clutter category: L - Low, M - Medium, H - High
         - **setup:** Background setup: TT - Table Top, S - Multilayered Shelf, D - Drawers, C - Chair, M - Human hand
 
-   
-
 ## Citation
 
-Will be added soon.
+```bibtex
+@article{bhat2024hifi,
+  title={HiFi-CS: Towards Open Vocabulary Visual Grounding For Robotic Grasping Using Vision-Language Models},
+  author={Bhat, Vineet and Krishnamurthy, Prashanth and Karri, Ramesh and Khorrami, Farshad},
+  journal={arXiv preprint arXiv:2409.10419},
+  year={2024}
+}
